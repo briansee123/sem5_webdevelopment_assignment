@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fdf6f9;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+/* Header Styles */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #ff69b4;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+.current {
+    color: #ff69b4;
+}
+
+/* Cute Symbols */
+.cute-symbol {
+    display: inline-block;
+    font-size: 1.2em;
+    animation: bounce 2s infinite;
+    margin: 0 10px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* About Page Specific Styles */
+.about-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.profile-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-header h2 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.education-box, .interests-box, .personal-note {
+    background: #fff8fa;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 2px dashed #ffd1dc;
+}
+
+.education-box h3, .interests-box h3, .personal-note h3 {
+    color: #ff69b4;
+    margin-top: 0;
+}
+
+.education-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.education-box li {
+    margin: 10px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.interest-item {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+}
+
+.interest-icon {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.personal-note p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #666;
+}

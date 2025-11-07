@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAO - Contact Me</title>
+    <link rel="stylesheet" href="contactpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><span class="cute-symbol">🐱</span> MAO's Portfolio <span class="cute-symbol">🌸</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="aboutpage.html">About</a></li>
+                    <li><a href="projectsportfoliopage.html">Projects</a></li>
+                    <li><a href="contactpage.html" class="current">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-section">
+            <h2 class="section-title">✨ Let's Connect! ✨</h2>
+            <p class="contact-intro">Feel free to reach out! I'd love to hear from you about projects, collaborations, or just to say hi! 💌</p>
+
+            <div class="contact-wrapper">
+                <form class="contact-form" action="#" method="POST">
+                    <!-- Name Input -->
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Your Name
+                        </label>
+                        <input type="text" id="name" name="name" required 
+                               placeholder="What should I call you? 😊">
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Your Email
+                        </label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="Where can I reach you? 📧">
+                    </div>
+
+                    <!-- Subject Selection -->
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-star"></i> Subject
+                        </label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a topic 🌟</option>
+                            <option value="collaboration">Project Collaboration 🤝</option>
+                            <option value="question">Question ❓</option>
+                            <option value="feedback">Feedback 💭</option>
+                            <option value="other">Other 🎨</option>
+                        </select>
+                    </div>
+
+                    <!-- Priority Radio Buttons -->
+                    <div class="form-group">
+                        <label class="radio-label">Priority Level</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="priority" value="low">
+                                <span>Relaxed 🌸</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="priority" value="medium" checked>
+                                <span>Normal 💌</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="priority" value="high">
+                                <span>Urgent ⚡</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Checkboxes -->
+                    <div class="form-group">
+                        <label class="checkbox-label">Preferred Contact Method</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="contact_method" value="email">
+                                <span>Email 📧</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="contact_method" value="phone">
+                                <span>Phone 📱</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="contact_method" value="social">
+                                <span>Social Media 💭</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i> Your Message
+                        </label>
+                        <textarea id="message" name="message" required 
+                                  placeholder="Tell me what's on your mind! 💭" rows="5"></textarea>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="form-group">
+                        <label for="attachment">
+                            <i class="fas fa-paperclip"></i> Attachment (optional)
+                        </label>
+                        <input type="file" id="attachment" name="attachment" 
+                               accept=".pdf,.doc,.docx,.jpg,.png">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        Send Message <span class="btn-emoji">🌟</span>
+                    </button>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Other Ways to Connect 🌈</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location: Malaysia 🇲🇾</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: mao@example.com</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Made with 💖 by MAO</p>
+        </div>
+    </footer>
+</body>
+</html>

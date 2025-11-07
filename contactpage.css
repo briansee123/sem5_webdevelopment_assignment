@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: "M PLUS Rounded 1c", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+    /* Add subtle Japanese pattern */
+    background-image: 
+        linear-gradient(45deg, #8bbcd910 25%, transparent 25%),
+        linear-gradient(-45deg, #8bbcd910 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #8bbcd910 75%),
+        linear-gradient(-45deg, transparent 75%, #8bbcd910 75%);
+    background-size: 20px 20px;
+}
+
+.container { width:85%; margin:auto; overflow:hidden; padding:0 10px; }
+
+/* Header Styles */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: #ff69b4;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+.current {
+    color: #ff69b4;
+}
+
+/* Cute Symbols */
+.cute-symbol {
+    display: inline-block;
+    font-size: 1.2em;
+    animation: bounce 2s infinite;
+    margin: 0 10px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Contact Page Specific Styles */
+.contact-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+}
+
+.contact-intro {
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(58, 90, 117, 0.08);
+    border: 2px dashed #8bbcd9;
+    position: relative;
+}
+
+/* focus-within label effect (not nested) */
+.form-group:focus-within label { color:#4a80a8; transform:translateX(10px); }
+.form-group:focus-within::before { content:"🎯"; position:absolute; left:-30px; top:50%; transform:translateY(-50%); font-size:1.2em; animation: target-bounce 0.5s ease; }
+@keyframes target-bounce { 0%,100%{ transform: translateY(-50%) scale(1);} 50%{ transform: translateY(-50%) scale(1.2);} }
+
+/* Add Doraemon pocket decoration */
+.contact-wrapper::before { content:""; position:absolute; top:-30px; right:30px; width:60px; height:60px; background:#3a5a75; border-radius:50%; border:3px solid #4a80a8; z-index:-1; }
+
+/* input focus effects (not nested) */
+input:focus, select:focus, textarea:focus { outline:none; border-color:#4a80a8; box-shadow:0 0 20px rgba(74,128,168,0.12); transform: translateY(-2px); }
+
+/* form-group base */
+.form-group { position:relative; overflow:hidden; margin-bottom:1.5rem; }
+.form-group::after { content:""; position:absolute; bottom:0; left:50%; width:0; height:2px; background: linear-gradient(90deg,#3a5a75,#8bbcd9,#3a5a75); transition: width 0.3s ease; transform:translateX(-50%); }
+.form-group:focus-within::after { width:100%; }
+
+.contact-wrapper::after { content:"🌸"; position:absolute; bottom:-20px; left:-20px; font-size:2em; animation: float 4s infinite; }
+.contact-wrapper::before { content: "🌟"; position: absolute; top: -20px; right: 30px; font-size: 2em; opacity: 0.25; animation: star-float 3s ease-in-out infinite; }
+
+/* Form Styles */
+.contact-form { padding-right:2rem; }
+
+@keyframes gradient-shift { 0%{ background-position:0% 50% } 50%{ background-position:100% 50% } 100%{ background-position:0% 50% } }
+
+.submit-btn:hover { transform: scale(1.02) translateY(-3px); box-shadow: 0 10px 20px rgba(74,128,168,0.2); }
+
+/* floating star decorative */
+@keyframes star-float { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-15px) rotate(180deg)} }
+
+.radio-option input:checked + span, .checkbox-option input:checked + span { color:#4a80a8; transform:scale(1.06); text-shadow:0 0 5px rgba(74,128,168,0.12); }
+.radio-option span, .checkbox-option span { transition:all 0.3s ease; display:inline-block; }
+
+@keyframes ring-wave { 0%{transform:scale(1);opacity:1} 100%{transform:scale(2);opacity:0} }
+.submit-btn::after { content:"🔔"; position:absolute; right:20px; top:50%; transform:translateY(-50%); font-size:1.2em; opacity:0; }
+.submit-btn:hover::after { opacity:1; animation:ring-wave 1s ease infinite; }
+
+label { display:block; color:#3a5a75; margin-bottom:0.5rem; font-weight:600; }
+
+input[type="text"], input[type="email"], select, textarea {
+    width:100%; padding:0.8rem; border:2px solid #8bbcd9; border-radius:15px; background:#fff; font-size:1rem; transition:all 0.3s ease;
+}
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus { outline:none; border-color:#4a80a8; box-shadow:0 0 10px rgba(74,128,168,0.15); }
+
+/* Radio and Checkbox Styles */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-option span,
+.checkbox-option span {
+    margin-left: 0.5rem;
+    color: #666;
+}
+
+/* File Upload Styling */
+input[type="file"] {
+    border: 2px dashed #ffd1dc;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn { background: linear-gradient(45deg,#3a5a75,#4a80a8); color:#fff; border:none; padding:1rem 2rem; border-radius:25px; font-size:1.05em; cursor:pointer; transition:all 0.25s ease; width:100%; margin-top:1rem; position:relative; overflow:hidden; }
+.submit-btn::before { content:"🔔"; position:absolute; right:20px; top:50%; transform:translateY(-50%); }
+.submit-btn:hover { transform:translateY(-2px); box-shadow:0 10px 20px rgba(74,128,168,0.12); }
+
+.btn-emoji {
+    margin-left: 0.5rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    border-left: 2px dashed #ffd1dc;
+    padding-left: 2rem;
+}
+
+.contact-info h3 {
+    color: #ff69b4;
+    margin-top: 0;
+}
+
+.info-item {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #ff69b4;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        border-left: none;
+        border-top: 2px dashed #ffd1dc;
+        padding-left: 0;
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

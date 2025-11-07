@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+    font-family: "M PLUS Rounded 1c", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #333;
+    /* subtle dandelion dots */
+    background-image: radial-gradient(#8bbcd920 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+/* Creative Projects Section */
+.section-title {
+    text-align: center;
+    color: #3a5a75;
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(58, 90, 117, 0.12);
+}
+
+/* Doraemon's pocket animation */
+.section-title::before {
+    content: "📦";
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    font-size: 2em;
+    animation: pocket-shake 3s infinite;
+}
+
+@keyframes pocket-shake {
+    0%, 100% { transform: translateX(-50%) rotate(0deg); }
+    25% { transform: translateX(-50%) rotate(-10deg); }
+    75% { transform: translateX(-50%) rotate(10deg); }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Floating elements background */
+.projects-grid::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><text x="0" y="15">🐱</text></svg>') 0 0/5em 5em,
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><text x="0" y="15">🌸</text></svg>') 2.5em 2.5em/5em 5em;
+    opacity: 0.1;
+    z-index: -1;
+    animation: bg-float 20s linear infinite;
+}
+
+@keyframes bg-float {
+    from { background-position: 0 0, 2.5em 2.5em; }
+    to { background-position: 5em 5em, 7.5em 7.5em; }
+}
+/* Header Styles */
+header {
+    background: #3a5a75;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #4a80a8 3px solid;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    color: #fff;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Interactive bell */
+nav ul { list-style: none; padding: 0; margin: 0; }
+nav ul li { display: inline; margin-right: 20px; }
+nav ul li a { color: #fff; text-decoration: none; opacity: 0.95; transition: all 0.25s ease; }
+nav ul li a:hover { color: #8bbcd9; }
+
+/* Decorative bell on card (interactive) */
+.project-card::before {
+    content: "🔔";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2em;
+    background: #f0f7ff;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #4a80a8;
+    transform: rotate(15deg);
+    opacity: 0.9;
+    transition: transform 0.25s ease;
+}
+
+.project-card::before:hover { transform: rotate(45deg) scale(1.15); }
+
+@keyframes ring { 0%,100%{transform:rotate(15deg)} 25%{transform:rotate(-10deg)} 50%{transform:rotate(5deg)} 75%{transform:rotate(-2deg)} }
+
+/* Project image hover effect */
+.project-image { height:150px; background: linear-gradient(45deg, #e6f2ff, #f0f7ff); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+.project-image::after { content:""; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%); transform:rotate(45deg); animation: shine 3s infinite; opacity:0; transition:opacity 0.3s ease; }
+.project-card:hover .project-image::after { opacity:1; }
+@keyframes shine { 0%{ transform:translateX(-100%) rotate(45deg)} 100%{ transform:translateX(100%) rotate(45deg)} }
+/* Add floating Doraemon items */
+.project-content::after {
+    content: "🎁";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    opacity: 0.5;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+/* Cute Symbols */
+.cute-symbol { display:inline-block; font-size:1.2em; animation:bounce 2s infinite; margin:0 10px; }
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+
+/* Projects Page Specific Styles */
+.projects-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(58, 90, 117, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #8bbcd9;
+    position: relative;
+}
+
+/* Add Doraemon's bell decoration to cards */
+.project-card::before {
+    content: "🔔";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2em;
+    background: #f0f7ff;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #4a80a8;
+    transform: rotate(15deg);
+    opacity: 0.8;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    height: 150px;
+    background: linear-gradient(45deg, #ffe6f0, #fff0f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon {
+    font-size: 4em;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    color: #ff69b4;
+    margin: 0 0 1rem 0;
+    font-size: 1.4em;
+}
+
+.project-tags {
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: #fff0f5;
+    color: #ff69b4;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9em;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ffd1dc;
+}
+
+.project-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.demo-link {
+    background: #ff69b4;
+    color: white;
+}
+
+.demo-link:hover {
+    background: #ff1493;
+}
+
+.code-link {
+    border: 2px solid #ff69b4;
+    color: #ff69b4;
+}
+
+.code-link:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+}
