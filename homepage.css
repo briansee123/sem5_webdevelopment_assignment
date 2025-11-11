@@ -1,187 +1,481 @@
-/* General Body Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    /* [日式优化] 几乎纯白背景，增加留白感 */
-    background: #fdfdfd; 
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Container for width control */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1e3a8a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
 .container {
-    width: 85%; /* 略微增加宽度，让页面更开阔 */
-    margin: auto;
-    overflow: hidden; 
-    padding: 0 10px; /* 增加一点左右内边距 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Cute Symbols Styles */
-.cute-symbol {
-    display: inline-block;
-    font-size: 1.2em;
-    animation: bounce 2s infinite;
-    margin: 0 10px;
+/* Header Navigation */
+.main-header {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.cat-emoji {
+    font-size: 2rem;
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.dandelion {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.dandelion-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.dandelion-2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.dandelion-3 {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.greeting {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    color: #0d47a1;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #1565c0;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.intro-box {
+    background: white;
+    border-radius: 30px;
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    box-shadow: 0 8px 30px rgba(30, 136, 229, 0.2);
+    position: relative;
+    border: 3px solid #64b5f6;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cat-corner {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+}
+
+.cat-icon {
+    font-size: 3rem;
+    animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-/* Header Styles */
-header {
-    /* [日式优化] 深沉的日式蓝作为主色调 */
-    background: #3a5a75; 
-    color: #fff;
-    padding-top: 20px;
-    min-height: 70px;
-    border-bottom: #4a80a8 3px solid;
-}
-
-/* [修正] 使用 Flexbox 来管理导航和 Logo 的对齐 */
-header .container {
-    display: flex;
-    justify-content: space-between; /* Logo 和导航分散对齐 */
-    align-items: center; /* 垂直居中 */
-    padding: 0; /* 移除容器的内边距，让 header 干净 */
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    transition: color 0.3s ease; /* 增加颜色过渡动画 */
-}
-
-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-header li {
-    display: inline;
-    padding: 0 15px; /* 略微减少间距，更精致 */
-}
-
-header .logo {
-    font-size: 1.8em; /* 放大 Logo 字体 */
-    margin: 0;
-    padding: 0;
-}
-
-header nav {
-    margin-top: 0; /* Flexbox 管理后，不再需要这个 margin */
-}
-
-header .current a, 
-header a:hover {
-    /* [日式优化] 更柔和的蓝色作为高亮色 */
-    color: #8bbcd9; 
-    font-weight: bold;
-}
-
-
-/* Hero Section Styles */
-#hero {
-    min-height: 450px; /* 增加高度 */
-    /* === [集成猫咪/蒲公英背景] === */
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    background-color: #fafafa; 
-    position: relative; /* 为伪元素和定位做准备 */
-    z-index: 1; /* 确保它在前面 */
-    /* ============================ */
-    
+.intro-text {
+    font-size: 1.2rem;
+    color: #1e3a8a;
     text-align: center;
-    padding: 80px 0; /* 增加留白 */
-    display: flex; 
-    align-items: center; 
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
     justify-content: center;
-}
-
-/* === [集成半透明遮罩] === */
-/* 用于确保背景图片上的文字清晰可见 */
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4); /* 半透明白色遮罩，让文字更易读 */
-    z-index: -1; /* 确保在内容下方 */
-}
-/* ======================== */
-
-.hero-content {
-    max-width: 600px;
-    padding: 30px; 
-    /* [日式优化] 略带透明的白色背景，让背景图透出 */
-    background: rgba(255, 255, 255, 0.7); 
-    border-radius: 15px; /* 更圆润的边角 */
-    /* [日式优化] 更精致的阴影 */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08); 
-    transition: transform 0.3s ease; 
-    z-index: 2; /* 确保内容在遮罩上方 */
-}
-
-/* [日式优化] 鼠标悬停时的动画 */
-.hero-content:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
-}
-
-.hero-content h2 {
-    color: #3a5a75; /* 标题使用深蓝 */
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.15em; /* 稍微放大正文字体 */
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    object-fit: cover; 
-    /* [日式优化] 边框使用高亮蓝 */
-    border: 3px solid #8bbcd9; 
-    margin-bottom: 15px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .btn {
-    display: inline-block;
-    color: #fff;
-    /* [日式优化] 按钮背景色 */
-    background: #4a80a8; 
-    padding: 12px 25px; /* 增大按钮尺寸 */
+    padding: 1rem 2rem;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    text-transform: capitalize; /* 取消大写 */
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.btn:hover {
-    background: #3a5a75; /* 悬停颜色变深 */
+.btn-primary {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
 }
 
-/* Footer Styles */
-footer {
-    padding: 20px;
-    margin-top: 30px; /* 增加顶部间距 */
-    color: #fff;
-    /* [日式优化] 底部使用深蓝 */
-    background-color: #3a5a75; 
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1976d2;
+    border: 3px solid #2196f3;
+}
+
+.btn-secondary:hover {
+    background: #2196f3;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Floating Cat */
+.floating-cat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.cat-container {
+    position: relative;
+}
+
+.cat {
+    font-size: 4rem;
+    animation: floatCat 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.cat:hover {
+    transform: scale(1.2) rotate(15deg);
+}
+
+@keyframes floatCat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.speech-bubble {
+    position: absolute;
+    bottom: 80px;
+    right: -20px;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #1565c0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    border: 2px solid #64b5f6;
+}
+
+.floating-cat:hover .speech-bubble {
+    opacity: 1;
+}
+
+/* Floating Coffee */
+.floating-coffee {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-size: 4rem;
+    animation: spin 10s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+}
+
+.section-title {
     text-align: center;
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 3rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(30, 136, 229, 0.2);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    border-color: #2196f3;
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+}
+
+.highlight-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    color: #1565c0;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.highlight-card p {
+    color: #424242;
+}
+
+/* Fun CTA Section */
+.fun-cta {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.fun-cta .container {
+    position: relative;
+    z-index: 10;
+}
+
+.cta-content {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 30px rgba(30, 136, 229, 0.3);
+    border: 3px solid #64b5f6;
+}
+
+.cta-content h2 {
+    color: #0d47a1;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    color: #424242;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(66, 165, 245, 0.4);
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.6);
+}
+
+.decorative-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.deco-cat {
+    position: absolute;
+    font-size: 5rem;
+    top: 20%;
+    left: 5%;
+    animation: float 5s ease-in-out infinite;
+}
+
+.deco-dandelion {
+    position: absolute;
+    font-size: 4rem;
+    bottom: 10%;
+    right: 10%;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Footer */
+.main-footer {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-tagline {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main-nav {
+        gap: 1rem;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .intro-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .floating-coffee {
+        font-size: 3rem;
+    }
 }

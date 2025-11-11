@@ -3,39 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO - Home</title>
+    <title>Brian See - Welcome!</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <header>
+    <!-- Header Navigation -->
+    <header class="main-header">
         <div class="container">
-            <h1 class="logo"><span class="cute-symbol">🐱</span> MAO's Portfolio <span class="cute-symbol">🌸</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="homepage.html" class="current">Home</a></li>
-                    <li><a href="aboutpage.html">About</a></li>
-                    <li><a href="projectsportfoliopage.html">Projects</a></li>
-                    <li><a href="contactpage.html">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <span class="cat-emoji">🐱</span>
+                <span class="logo-text">Brian See</span>
+            </div>
+            <nav class="main-nav">
+                <a href="homepage.html" class="nav-link active">Home</a>
+                <a href="projectsportfoliopage.html" class="nav-link">Projects</a>
+                <a href="aboutpage.html" class="nav-link">About</a>
+                <a href="contactpage.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section id="hero">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="dandelion dandelion-1">🌼</div>
+        <div class="dandelion dandelion-2">🌼</div>
+        <div class="dandelion dandelion-3">🌼</div>
+        
         <div class="container">
             <div class="hero-content">
-                <img src="avatar.jpg" alt="MAO's Avatar" class="profile-pic"> 
-                <h2>Hello, I'm MAO.</h2>
-                <p>A 24-year-old Bachelor of Software Engineering student at Southern University College.</p>
-                <p>Welcome to my personal corner on the web!</p>
-                <a href="aboutpage.html" class="btn">Learn More About Me</a>
+                <div class="greeting">
+                    <h1 class="main-title">Welcome to My Page! 👋</h1>
+                    <p class="subtitle">Hi there! I'm Brian See</p>
+                </div>
+                
+                <div class="intro-box">
+                    <div class="cat-corner">
+                        <span class="cat-icon">😺</span>
+                    </div>
+                    <p class="intro-text">
+                        A Software Engineering student at Southern University College, 
+                        fueled by coffee ☕ and inspired by cats 🐱 and dandelions 🌼
+                    </p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="projectsportfoliopage.html" class="btn btn-primary">
+                        View My Projects 🚀
+                    </a>
+                    <a href="aboutpage.html" class="btn btn-secondary">
+                        Learn More About Me
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Cat Element -->
+            <div class="floating-cat">
+                <div class="cat-container">
+                    <div class="cat">🐱</div>
+                    <div class="speech-bubble">Meow! Click me!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Coffee Cup -->
+        <div class="floating-coffee">☕</div>
+    </section>
+
+    <!-- Quick Highlights Section -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">What I Love ✨</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">☕</div>
+                    <h3>Coffee Enthusiast</h3>
+                    <p>Coding sessions powered by caffeine</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🐱</div>
+                    <h3>Cat Lover</h3>
+                    <p>Feline friends make everything better</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🌼</div>
+                    <h3>Dandelion Dreams</h3>
+                    <p>Finding beauty in simple things</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Fun CTA Section -->
+    <section class="fun-cta">
         <div class="container">
-            <p>&copy; 2023 MAO. All rights reserved.</p>
+            <div class="cta-content">
+                <h2>Let's Connect! 🌟</h2>
+                <p>Feel free to explore my projects or reach out to say hi!</p>
+                <a href="contactpage.html" class="btn btn-accent">Get In Touch 💌</a>
+            </div>
+            <div class="decorative-elements">
+                <span class="deco-cat">😸</span>
+                <span class="deco-dandelion">🌼</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Brian See | Software Engineering Student</p>
+            <p class="footer-tagline">Made with ☕ and 💙</p>
         </div>
     </footer>
 </body>

@@ -3,155 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO - Projects</title>
+    <title>Brian's Creative Showcase ☀️</title>
     <link rel="stylesheet" href="projectsportfoliopage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Header Navigation -->
+    <header class="main-header">
         <div class="container">
-            <h1 class="logo"><span class="cute-symbol">🐱</span> MAO's Portfolio <span class="cute-symbol">🌸</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="homepage.html">Home</a></li>
-                    <li><a href="aboutpage.html">About</a></li>
-                    <li><a href="projectsportfoliopage.html" class="current">Projects</a></li>
-                    <li><a href="contactpage.html">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <span class="sun-emoji">☀️</span>
+                <span class="logo-text">Brian See</span>
+            </div>
+            <nav class="main-nav">
+                <a href="homepage.html" class="nav-link">Home</a>
+                <a href="projectsportfoliopage.html" class="nav-link active">Projects</a>
+                <a href="aboutpage.html" class="nav-link">About</a>
+                <a href="contactpage.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="projects-container">
-        <h2 class="section-title">✨ My Creative Projects ✨</h2>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">🐱</span>
-                </div>
-                <div class="project-content">
-                    <h3>Paw Tracker App</h3>
-                    <p class="project-tags">
-                        <span class="tag">Mobile App</span>
-                        <span class="tag">React Native</span>
-                        <span class="tag">Firebase</span>
-                    </p>
-                    <p>A cute mobile application for pet owners to track their cats' daily activities, meals, and health records. Features include medication reminders and vet appointment scheduling.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
+    <!-- Floating Summer Elements -->
+    <div class="floating-sun sun-1">☀️</div>
+    <div class="floating-sun sun-2">🌻</div>
+    <div class="floating-sparkle sparkle-1">✨</div>
+    <div class="floating-sparkle sparkle-2">⭐</div>
+    <div class="floating-sparkle sparkle-3">✨</div>
+    <div class="anime-star star-1">🌟</div>
+    <div class="anime-star star-2">💫</div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">🌸</span>
-                </div>
-                <div class="project-content">
-                    <h3>Dandelion Weather</h3>
-                    <p class="project-tags">
-                        <span class="tag">Web App</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">API Integration</span>
-                    </p>
-                    <p>A whimsical weather application that displays forecasts with dandelion-themed animations. The background changes based on weather conditions with floating dandelion seeds.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">🎮</span>
-                </div>
-                <div class="project-content">
-                    <h3>Pixel Pet Adventure</h3>
-                    <p class="project-tags">
-                        <span class="tag">Game Dev</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                    </p>
-                    <p>A charming 2D pixel art game where players take care of virtual pets while solving puzzles and collecting cute items. Features mini-games and customizable pet accessories.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Play Game <i class="fas fa-gamepad"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">🎵</span>
-                </div>
-                <div class="project-content">
-                    <h3>Melody Memos</h3>
-                    <p class="project-tags">
-                        <span class="tag">Web App</span>
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Web Audio API</span>
-                    </p>
-                    <p>A musical note-taking app that lets users record song ideas with a built-in virtual piano. Features include voice recording, melody playback, and share functionality.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">👨‍🍳</span>
-                </div>
-                <div class="project-content">
-                    <h3>Recipe Diary</h3>
-                    <p class="project-tags">
-                        <span class="tag">Full Stack</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </p>
-                    <p>A personal recipe management system with cute UI design. Users can store recipes, create shopping lists, and share their favorite dishes with friends.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <span class="project-icon">❤️</span>
-                </div>
-                <div class="project-content">
-                    <h3>Emergency Helper</h3>
-                    <p class="project-tags">
-                        <span class="tag">Mobile App</span>
-                        <span class="tag">Flutter</span>
-                        <span class="tag">GPS Integration</span>
-                    </p>
-                    <p>A mobile app providing quick access to emergency procedures and CPR guidelines. Features offline access, emergency contact management, and location sharing.</p>
-                    <div class="project-links">
-                        <a href="#" class="demo-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" class="code-link">View Code <i class="fab fa-github"></i></a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-projects">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="page-title">Creative Showcase ✨</h1>
+                <p class="page-subtitle">Sample concepts & ideas inspired by things I love!</p>
+                <div class="anime-faces">
+                    <span class="anime-emoji">😊</span>
+                    <span class="anime-emoji">🌸</span>
+                    <span class="anime-emoji">🎌</span>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
+    <!-- Projects Grid -->
+    <section class="projects-section">
         <div class="container">
-            <p>Made with 💖 by MAO</p>
+            
+            <!-- Project 1: Cat Cafe Website -->
+            <div class="project-card">
+                <div class="project-badge">Sample Concept</div>
+                <div class="project-header">
+                    <div class="project-icon">🐱☕</div>
+                    <h2 class="project-title">Purrfect Cat Cafe</h2>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        A cozy website concept for a cat cafe where visitors can browse cats available for adoption, 
+                        check the cafe menu, and book playtime sessions with adorable feline friends. 
+                        Because who doesn't love cats and coffee together?
+                    </p>
+                    <div class="project-features">
+                        <h3>✨ Concept Features:</h3>
+                        <ul>
+                            <li>🐱 Browse adoptable cats with their personalities</li>
+                            <li>☕ Interactive menu with cat-themed drinks</li>
+                            <li>📅 Booking system for cat playtime sessions</li>
+                            <li>📸 Photo gallery of cafe cats</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Cats</span>
+                        <span class="tag">Coffee</span>
+                        <span class="tag">Cute</span>
+                        <span class="tag">Concept</span>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="visual-placeholder cat-visual">
+                        <span class="visual-icon">🐱</span>
+                        <span class="visual-icon">☕</span>
+                        <span class="visual-icon">🍰</span>
+                        <p class="visual-text">Imagine a warm, inviting space filled with happy cats! 😺</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Spooky Halloween Game -->
+            <div class="project-card">
+                <div class="project-badge special-badge">Halloween Special 🎃</div>
+                <div class="project-header">
+                    <div class="project-icon">🎃👻</div>
+                    <h2 class="project-title">Spooky Pumpkin Quest</h2>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        A fun Halloween-themed browser game concept where players help jack-o'-lanterns find their way 
+                        through a spooky maze, collecting candy and avoiding friendly ghosts. Perfect for Halloween lovers 
+                        who prefer treats over tricks!
+                    </p>
+                    <div class="project-features">
+                        <h3>✨ Game Ideas:</h3>
+                        <ul>
+                            <li>🎃 Play as a cute animated jack-o'-lantern</li>
+                            <li>👻 Navigate through spooky but friendly mazes</li>
+                            <li>🍬 Collect Halloween candy for points</li>
+                            <li>🌙 Unlock special Halloween-themed levels</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Halloween</span>
+                        <span class="tag">Gaming</span>
+                        <span class="tag">Spooky</span>
+                        <span class="tag">Interactive</span>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="visual-placeholder halloween-visual">
+                        <span class="visual-icon">🎃</span>
+                        <span class="visual-icon">👻</span>
+                        <span class="visual-icon">🍬</span>
+                        <p class="visual-text">More tricks, more treats! 🌙</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Anime Tracker -->
+            <div class="project-card">
+                <div class="project-badge anime-badge">Anime Inspired 🎌</div>
+                <div class="project-header">
+                    <div class="project-icon">📺✨</div>
+                    <h2 class="project-title">MyAnime Tracker</h2>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        A personal anime tracking concept to keep tabs on what you're watching, plan your watchlist, 
+                        rate your favorites, and discover new shows. For anime lovers who need to organize their ever-growing 
+                        list of series to watch!
+                    </p>
+                    <div class="project-features">
+                        <h3>✨ Concept Features:</h3>
+                        <ul>
+                            <li>📋 Track currently watching, completed, and plan-to-watch</li>
+                            <li>⭐ Rate and review your favorite anime</li>
+                            <li>🔔 Get reminded about new episodes</li>
+                            <li>🎨 Beautiful anime-styled interface</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Anime</span>
+                        <span class="tag">Tracker</span>
+                        <span class="tag">Organize</span>
+                        <span class="tag">Watchlist</span>
+                    </div>
+                </div>
+                <div class="project-visual">
+                    <div class="visual-placeholder anime-visual">
+                        <span class="visual-icon">📺</span>
+                        <span class="visual-icon">🌸</span>
+                        <span class="visual-icon">⭐</span>
+                        <p class="visual-text">Never lose track of your anime journey! 🎌</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fun Note Section -->
+    <section class="fun-note">
+        <div class="container">
+            <div class="note-box">
+                <div class="note-decoration">
+                    <span>🌟</span>
+                    <span>✨</span>
+                    <span>💫</span>
+                </div>
+                <h2>A Little Note 💭</h2>
+                <p>These are creative concepts and ideas - things I think would be cool to exist! 
+                They're inspired by the things I genuinely love: cats, Halloween, anime, and making people smile. 
+                Sometimes the best projects are the ones we dream about! 🌈</p>
+                <div class="encouraging-message">
+                    <span class="message-icon">🌻</span>
+                    <p>"Creativity isn't about perfection, it's about imagination!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Like These Ideas? 💡</h2>
+                <p>Feel free to reach out if you want to chat about cats, anime, or creative concepts!</p>
+                <a href="contactpage.html" class="btn-cta">Let's Talk! 💬</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Brian See | Creative Dreamer</p>
+            <p class="footer-tagline">Made with ☀️ and imagination</p>
         </div>
     </footer>
+
+    <!-- Interactive Anime Character -->
+    <div class="floating-anime-char">
+        <div class="anime-character">🌸</div>
+        <div class="anime-bubble">Ganbare! ✨</div>
+    </div>
 </body>
 </html>

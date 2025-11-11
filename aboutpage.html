@@ -3,80 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO - About Me</title>
+    <title>About Brian - Autumn Vibes 🍂</title>
     <link rel="stylesheet" href="aboutpage.css">
 </head>
 <body>
-    <header>
+    <!-- Header Navigation -->
+    <header class="main-header">
         <div class="container">
-            <h1 class="logo"><span class="cute-symbol">🐱</span> MAO's Portfolio <span class="cute-symbol">🌸</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="homepage.html">Home</a></li>
-                    <li><a href="aboutpage.html" class="current">About</a></li>
-                    <li><a href="projectsportfoliopage.html">Projects</a></li>
-                    <li><a href="contactpage.html">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <span class="pumpkin-emoji">🎃</span>
+                <span class="logo-text">Brian See</span>
+            </div>
+            <nav class="main-nav">
+                <a href="homepage.html" class="nav-link">Home</a>
+                <a href="projectsportfoliopage.html" class="nav-link">Projects</a>
+                <a href="aboutpage.html" class="nav-link active">About</a>
+                <a href="contactpage.html" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="about-container">
-        <section class="profile-section">
-            <div class="profile-header">
-                <h2>✨ About Me ✨</h2>
-                <p class="subtitle">Tech enthusiast & lifelong learner 💖</p>
+    <!-- Floating Halloween Elements -->
+    <div class="floating-pumpkin pumpkin-1">🎃</div>
+    <div class="floating-pumpkin pumpkin-2">🎃</div>
+    <div class="floating-leaf leaf-1">🍂</div>
+    <div class="floating-leaf leaf-2">🍁</div>
+    <div class="floating-leaf leaf-3">🍂</div>
+    <div class="floating-coffee-cup">🧋</div>
+
+    <!-- Hero Section -->
+    <section class="hero-about">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="page-title">About Me 🍂</h1>
+                <p class="page-subtitle">Just a regular person navigating life, one iced coffee at a time</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Personal Introduction -->
+            <div class="about-card intro-card">
+                <div class="card-decoration">
+                    <span class="deco-icon">🎃</span>
+                    <span class="deco-icon">☕</span>
+                </div>
+                <h2 class="card-title">Hi, I'm Brian! 👋</h2>
+                <div class="card-body">
+                    <p>Welcome to my little corner of the internet! I'm a student at <strong>Southern University College</strong>, currently pursuing a Bachelor's degree in Software Engineering.</p>
+                    <p>To be honest? I'm still figuring things out. Life doesn't always go as planned, and that's okay. I'm here, learning, growing, and taking it one day at a time.</p>
+                </div>
             </div>
 
-            <div class="education-box">
-                <h3>🎓 Education Journey</h3>
-                <ul>
-                    <li>📚 Diploma in Information Technology</li>
-                    <li>🖥️ Currently pursuing Bachelor's Degree in Software Engineering</li>
-                </ul>
-            </div>
-
-            <div class="interests-box">
-                <h3>🌟 My Interests & Skills</h3>
-                <div class="interests-grid">
-                    <div class="interest-item">
-                        <span class="interest-icon">🎮</span>
-                        <p>Gaming</p>
+            <!-- Education Section -->
+            <div class="about-card education-card">
+                <div class="card-header">
+                    <span class="header-icon">📚</span>
+                    <h2 class="card-title">Education Journey</h2>
+                </div>
+                <div class="card-body">
+                    <div class="education-item">
+                        <div class="edu-icon">🎓</div>
+                        <div class="edu-content">
+                            <h3>Bachelor of Software Engineering</h3>
+                            <p class="edu-institution">Southern University College</p>
+                            <p class="edu-status">Currently Studying</p>
+                        </div>
                     </div>
-                    <div class="interest-item">
-                        <span class="interest-icon">🐱</span>
-                        <p>Cat Lover</p>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-icon">🌸</span>
-                        <p>Dandelions</p>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-icon">🎵</span>
-                        <p>Singing</p>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-icon">👨‍🍳</span>
-                        <p>Cooking</p>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-icon">❤️</span>
-                        <p>CPR Certified</p>
+                    <div class="education-item">
+                        <div class="edu-icon">📜</div>
+                        <div class="edu-content">
+                            <h3>Diploma in Information Technology</h3>
+                            <p class="edu-status">Completed</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="personal-note">
-                <h3>🌈 Personal Note</h3>
-                <p>I'm passionate about learning new skills and expanding my horizons! Whether it's mastering a new programming language, learning life-saving skills like CPR, or experimenting with new recipes in the kitchen, I believe in continuous growth and development. When I'm not coding or studying, you might find me singing, playing games, or spending time with cats! 🐱✨</p>
+            <!-- Skills Section -->
+            <div class="about-card skills-card">
+                <div class="card-header">
+                    <span class="header-icon">⭐</span>
+                    <h2 class="card-title">Things I Can Do</h2>
+                </div>
+                <div class="card-body">
+                    <p class="skills-intro">Not everything valuable shows up on a resume. Here are some things I'm proud of:</p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-emoji">🩺</span>
+                            <h3>CPR Certified</h3>
+                            <p>Because helping others matters</p>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-emoji">🍳</span>
+                            <h3>Cooking</h3>
+                            <p>Can make a decent meal (or instant noodles)</p>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-emoji">💆</span>
+                            <h3>Patience</h3>
+                            <p>Taking life at my own pace</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
+            <!-- Interests Section -->
+            <div class="about-card interests-card">
+                <div class="card-header">
+                    <span class="header-icon">❤️</span>
+                    <h2 class="card-title">What Makes Me Happy</h2>
+                </div>
+                <div class="card-body">
+                    <div class="interests-grid">
+                        <div class="interest-box">
+                            <div class="interest-icon">🐱</div>
+                            <h3>Cats</h3>
+                            <p>They just get it, you know?</p>
+                        </div>
+                        <div class="interest-box">
+                            <div class="interest-icon">🧊☕</div>
+                            <h3>Iced Coffee</h3>
+                            <p>My daily fuel and comfort drink</p>
+                        </div>
+                        <div class="interest-box">
+                            <div class="interest-icon">🌼</div>
+                            <h3>Dandelions</h3>
+                            <p>Simple, resilient, beautiful</p>
+                        </div>
+                        <div class="interest-box">
+                            <div class="interest-icon">📺</div>
+                            <h3>Anime</h3>
+                            <p>Endless stories, endless worlds</p>
+                        </div>
+                        <div class="interest-box">
+                            <div class="interest-icon">🎮</div>
+                            <h3>Gaming</h3>
+                            <p>My escape and happy place</p>
+                        </div>
+                        <div class="interest-box">
+                            <div class="interest-icon">🎵</div>
+                            <h3>Music</h3>
+                            <p>Always got my headphones on</p>
+                        </div>
+                        <div class="interest-box special-interest">
+                            <div class="interest-icon">🎃</div>
+                            <h3>Halloween</h3>
+                            <p>The BEST holiday! Spooky vibes > birthday cake</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Honest Truth Section -->
+            <div class="about-card truth-card">
+                <div class="card-decoration">
+                    <span class="deco-icon">🍂</span>
+                </div>
+                <h2 class="card-title">The Honest Truth 🍁</h2>
+                <div class="card-body">
+                    <p>I'll be real with you - I'm not sure where I'm headed, and that's okay. Life has a funny way of taking us on unexpected journeys.</p>
+                    <p>Some days are tough, and I'm still learning to navigate this path I'm on. But I'm here, I'm trying, and I'm surrounded by things that bring me joy - cats, iced coffee, good games, and great music.</p>
+                    <p class="truth-highlight">Sometimes just showing up is enough. And today, I showed up. 🌟</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Fun CTA -->
+    <section class="cta-section">
         <div class="container">
-            <p>Made with 💖 by MAO</p>
+            <div class="cta-box">
+                <div class="cta-pumpkins">
+                    <span>🎃</span>
+                    <span>🎃</span>
+                    <span>🎃</span>
+                </div>
+                <h2>Want to Chat?</h2>
+                <p>Feel free to reach out - whether it's about cats, anime, or just life in general!</p>
+                <a href="contactpage.html" class="btn-cta">Let's Connect! 💬</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Brian See | Just Being Myself</p>
+            <p class="footer-tagline">Made with 🎃 and ☕</p>
         </div>
     </footer>
+
+    <!-- Interactive Jack-o'-lantern -->
+    <div class="interactive-jack">
+        <div class="jack-face">🎃</div>
+        <div class="jack-bubble">Boo! 👻</div>
+    </div>
 </body>
 </html>

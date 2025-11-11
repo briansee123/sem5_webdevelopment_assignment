@@ -3,151 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO - Contact Me</title>
+    <title>Contact Brian - Let's Connect</title>
     <link rel="stylesheet" href="contactpage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Animated Background Elements -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
         <div class="container">
-            <h1 class="logo"><span class="cute-symbol">🐱</span> MAO's Portfolio <span class="cute-symbol">🌸</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="homepage.html">Home</a></li>
-                    <li><a href="aboutpage.html">About</a></li>
-                    <li><a href="projectsportfoliopage.html">Projects</a></li>
-                    <li><a href="contactpage.html" class="current">Contact</a></li>
-                </ul>
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">Brian See</span>
+            </div>
+            <nav class="main-nav">
+                <a href="homepage.html" class="nav-link">Home</a>
+                <a href="projectsportfoliopage.html" class="nav-link">Projects</a>
+                <a href="aboutpage.html" class="nav-link">About</a>
+                <a href="contactpage.html" class="nav-link active">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="contact-container">
-        <section class="contact-section">
-            <h2 class="section-title">✨ Let's Connect! ✨</h2>
-            <p class="contact-intro">Feel free to reach out! I'd love to hear from you about projects, collaborations, or just to say hi! 💌</p>
+    <!-- Hero Section -->
+    <section class="hero-contact">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tag">Get In Touch</div>
+                <h1 class="page-title">Let's Connect</h1>
+                <p class="page-subtitle">Have a question, idea, or just want to say hello? I'd love to hear from you.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
             <div class="contact-wrapper">
-                <form class="contact-form" action="#" method="POST">
-                    <!-- Name Input -->
-                    <div class="form-group">
-                        <label for="name">
-                            <i class="fas fa-user"></i> Your Name
-                        </label>
-                        <input type="text" id="name" name="name" required 
-                               placeholder="What should I call you? 😊">
-                    </div>
-
-                    <!-- Email Input -->
-                    <div class="form-group">
-                        <label for="email">
-                            <i class="fas fa-envelope"></i> Your Email
-                        </label>
-                        <input type="email" id="email" name="email" required 
-                               placeholder="Where can I reach you? 📧">
-                    </div>
-
-                    <!-- Subject Selection -->
-                    <div class="form-group">
-                        <label for="subject">
-                            <i class="fas fa-star"></i> Subject
-                        </label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Choose a topic 🌟</option>
-                            <option value="collaboration">Project Collaboration 🤝</option>
-                            <option value="question">Question ❓</option>
-                            <option value="feedback">Feedback 💭</option>
-                            <option value="other">Other 🎨</option>
-                        </select>
-                    </div>
-
-                    <!-- Priority Radio Buttons -->
-                    <div class="form-group">
-                        <label class="radio-label">Priority Level</label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="priority" value="low">
-                                <span>Relaxed 🌸</span>
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="priority" value="medium" checked>
-                                <span>Normal 💌</span>
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="priority" value="high">
-                                <span>Urgent ⚡</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Preferences Checkboxes -->
-                    <div class="form-group">
-                        <label class="checkbox-label">Preferred Contact Method</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-option">
-                                <input type="checkbox" name="contact_method" value="email">
-                                <span>Email 📧</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" name="contact_method" value="phone">
-                                <span>Phone 📱</span>
-                            </label>
-                            <label class="checkbox-option">
-                                <input type="checkbox" name="contact_method" value="social">
-                                <span>Social Media 💭</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Message Textarea -->
-                    <div class="form-group">
-                        <label for="message">
-                            <i class="fas fa-comment"></i> Your Message
-                        </label>
-                        <textarea id="message" name="message" required 
-                                  placeholder="Tell me what's on your mind! 💭" rows="5"></textarea>
-                    </div>
-
-                    <!-- File Upload -->
-                    <div class="form-group">
-                        <label for="attachment">
-                            <i class="fas fa-paperclip"></i> Attachment (optional)
-                        </label>
-                        <input type="file" id="attachment" name="attachment" 
-                               accept=".pdf,.doc,.docx,.jpg,.png">
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">
-                        Send Message <span class="btn-emoji">🌟</span>
-                    </button>
-                </form>
-
-                <!-- Contact Information -->
+                
+                <!-- Left Side - Info -->
                 <div class="contact-info">
-                    <h3>Other Ways to Connect 🌈</h3>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Location: Malaysia 🇲🇾</span>
+                    <h2 class="info-title">Drop Me a Message</h2>
+                    <p class="info-description">
+                        Whether you want to chat about cats, discuss anime recommendations, 
+                        share your thoughts on the perfect iced coffee, or just connect - 
+                        I'm all ears. Fill out the form and I'll get back to you soon!
+                    </p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="card-icon"></div>
+                            <div class="card-content">
+                                <h3>Quick Response</h3>
+                                <p>I'll reply within 24-48 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="card-icon"></div>
+                            <div class="card-content">
+                                <h3>Friendly Chat</h3>
+                                <p>No question is too small</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="card-icon"></div>
+                            <div class="card-content">
+                                <h3>Open Minded</h3>
+                                <p>All topics are welcome</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email: mao@example.com</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+
+                    <div class="decorative-quote">
+                        <div class="quote-mark">"</div>
+                        <p>Every connection starts with a simple hello.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
+                <!-- Right Side - Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header">
+                            <h3>Send a Message</h3>
+                            <div class="form-decoration"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your.email@example.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="subject" 
+                                placeholder="What's this about?"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"></span>
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="successMessage">
+                        <div class="success-icon"></div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="additional-info">
         <div class="container">
-            <p>Made with 💖 by MAO</p>
+            <div class="info-grid">
+                <div class="info-block">
+                    <div class="block-number">01</div>
+                    <h3>Casual Conversations</h3>
+                    <p>Feel free to reach out about anything - from anime recommendations to life chats</p>
+                </div>
+                <div class="info-block">
+                    <div class="block-number">02</div>
+                    <h3>Project Ideas</h3>
+                    <p>Got a creative concept or idea you want to discuss? Let's brainstorm together</p>
+                </div>
+                <div class="info-block">
+                    <div class="block-number">03</div>
+                    <h3>Just Say Hi</h3>
+                    <p>Sometimes a simple hello is all we need to make someone's day better</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Brian See - Software Engineering Student</p>
+                <p class="footer-tagline">Southern University College</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brian See. Crafted with care and creativity.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Hide form, show success message
+            document.querySelector('.contact-form').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'flex';
+            
+            // Reset form
+            setTimeout(() => {
+                this.reset();
+                document.querySelector('.contact-form').style.display = 'block';
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+
+        // Add focus effects to inputs
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
